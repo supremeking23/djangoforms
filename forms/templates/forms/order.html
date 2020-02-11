@@ -1,0 +1,20 @@
+<h1>Order Pizza</h1>
+
+<form  method="POST" action="{% url 'forms:order' %}" enctype="multipart/form-data">
+	{% csrf_token %}
+	<h3>{{note}}</h3>
+	{{pizza_form}}
+	<input type="submit" value="Order Pizza">
+</form>
+
+
+<br /> <br />
+
+<p>Want more than one pizza? </p>
+
+
+
+<form action="" method="get">
+	{{multiple_form}}
+	<input type="submit" value="Get Pizzas">
+</form>
